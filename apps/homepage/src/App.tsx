@@ -1,7 +1,21 @@
+import { Nav } from "./components/Nav";
+import { Hero } from "./components/Hero";
+import { Privacy } from "./components/Privacy";
+import { DeFi } from "./components/DeFi";
+import { Features } from "./components/Features";
+import { Footer } from "./components/Footer";
+
 export function App() {
   return (
     <div className="min-h-screen bg-dark text-text-light">
-      <h1 className="text-4xl font-bold p-8">Milady Homepage</h1>
+      <Nav />
+      <main>
+        <Hero />
+        <Privacy />
+        <DeFi />
+        <Features />
+      </main>
+      <Footer />
     </div>
   );
 }
