@@ -1,53 +1,45 @@
 const features = [
   {
-    title: "Multi-Model",
-    description: "Claude, GPT, Ollama, Groq, DeepSeek — use any model you want.",
+    title: "Unified Message Bus",
+    description: "One event pipeline for every interface — Discord, Telegram, X, HTTP or onchain. Ship your agent once; swap transport adapters without touching business logic.",
   },
   {
-    title: "Cross-Platform",
-    description: "Desktop, web, and mobile. One AI companion everywhere.",
+    title: "Composable Swarms",
+    description: "Leverage Worlds (server/workspace) and Rooms (channel/DMs) so each agent keeps its own context yet can signal others, enabling delegation, consensus and load-balancing.",
   },
   {
-    title: "Custom Personality",
-    description: "Define your AI's character, voice, and behavior. Make it truly yours.",
+    title: "Strategic Action Chaining",
+    description: "LLM-driven tool calls enable advanced workflows: branch or schedule actions; run steps in parallel or pause for user input. Real operations, not just chat replies.",
   },
   {
-    title: "Plugin System",
-    description: "Extend with plugins for Twitch, YouTube, trading, and more.",
-  },
-  {
-    title: "Knowledge Base",
-    description: "Feed documents and URLs. Your AI learns what you teach it.",
-  },
-  {
-    title: "Autonomous Loops",
-    description: "Set goals and let your AI work toward them independently.",
+    title: "Modular Open-Source",
+    description: "Every capability—model provider, vector store, social network, custom action—arrives as an npm plugin. Hot-swap at runtime, stay clear of vendor lock-in.",
   },
 ];
 
 export function Features() {
   return (
-    <section id="features" className="relative py-32 px-6 md:px-12 bg-dark">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-20">
-          <p className="text-sm font-medium text-brand uppercase tracking-widest mb-4">
-            Features
+    <section id="features" className="relative py-48 bg-dark text-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="mb-32 text-center">
+          <p className="text-xs font-mono text-brand tracking-[0.2em] uppercase mb-4">
+            Architecture
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] max-w-3xl">
-            Everything you need.
-            <br />
-            Nothing you don't.
+          <h2 className="text-5xl md:text-7xl font-black leading-none tracking-tighter uppercase">
+            Core Modules
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
+        <div className="space-y-32 md:space-y-48">
+          {features.map((feature, i) => (
             <div
               key={feature.title}
-              className="p-6 rounded-xl border border-white/[0.06] hover:border-brand/30 transition-colors duration-300"
+              className={`flex flex-col ${i % 2 === 0 ? 'items-start text-left' : 'items-end text-right'}`}
             >
-              <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-              <p className="text-sm text-text-muted leading-relaxed">{feature.description}</p>
+              <div className="max-w-3xl group">
+                <h3 className="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tighter text-white group-hover:text-brand transition-colors duration-500">{feature.title}</h3>
+                <p className="text-xl md:text-2xl text-white/50 font-mono leading-relaxed">{feature.description}</p>
+              </div>
             </div>
           ))}
         </div>
