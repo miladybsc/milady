@@ -28,10 +28,30 @@ export function Footer() {
         </div>
 
         {/* MASSIVE TYPOGRAPHY */}
-        <div className="text-center w-full overflow-hidden select-none mb-12 border-t border-b border-sharp py-8 flex justify-center">
+        <div className="relative text-center w-full overflow-hidden select-none mb-12 border-t border-b border-sharp py-8 flex justify-center">
           <h1 className="text-[12vw] font-black leading-none tracking-tighter text-text-light/10 uppercase whitespace-nowrap">
             MILADY APP
           </h1>
+
+          {/* Hidden characters — only visible on hover */}
+          <img
+            src="/black-asset-1.png"
+            alt=""
+            draggable={false}
+            className="absolute left-0 bottom-0 w-36 h-44 object-contain object-bottom opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-auto select-none"
+          />
+          <img
+            src="/black-asset-2.png"
+            alt=""
+            draggable={false}
+            className="absolute left-1/2 -translate-x-1/2 bottom-0 w-36 h-44 object-contain object-bottom opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-auto select-none"
+          />
+          <img
+            src="/black-asset-3.png"
+            alt=""
+            draggable={false}
+            className="absolute right-0 bottom-0 w-36 h-44 object-contain object-bottom opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-auto select-none"
+          />
         </div>
 
         <div className="text-center">

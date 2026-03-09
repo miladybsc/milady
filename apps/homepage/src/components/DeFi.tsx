@@ -4,14 +4,55 @@ const capabilities = [
   {
     title: "BSC Native Wallet",
     description: "Built-in wallet with BNB and BEP-20 token support. Your keys, your crypto.",
+    image: "/black-asset-1.png",
+    imageStyle: {
+      position: "absolute" as const,
+      bottom: 0,
+      left: 0,
+      width: "150px",
+      height: "200px",
+      objectFit: "contain" as const,
+      objectPosition: "bottom left",
+      zIndex: 0,
+      pointerEvents: "none" as const,
+      transition: "opacity 0.5s ease",
+    },
   },
   {
     title: "DEX Trading",
     description: "Swap tokens directly through your AI companion. Real-time pricing from PancakeSwap.",
+    image: "/black-asset-2.png",
+    imageStyle: {
+      position: "absolute" as const,
+      top: 0,
+      left: "50%",
+      width: "150px",
+      height: "200px",
+      objectFit: "contain" as const,
+      objectPosition: "bottom center",
+      transform: "translateX(-50%) rotate(180deg)",
+      zIndex: 0,
+      pointerEvents: "none" as const,
+      transition: "opacity 0.5s ease 0.08s",
+    },
   },
   {
     title: "Portfolio Tracking",
     description: "Auto-discover token balances, track trade history, and monitor positions — all locally.",
+    image: "/black-asset-3.png",
+    imageStyle: {
+      position: "absolute" as const,
+      right: 0,
+      top: "50%",
+      width: "150px",
+      height: "200px",
+      objectFit: "contain" as const,
+      objectPosition: "bottom center",
+      transform: "translateY(-50%) rotate(-90deg)",
+      zIndex: 0,
+      pointerEvents: "none" as const,
+      transition: "opacity 0.5s ease 0.16s",
+    },
   },
 ];
 
@@ -236,15 +277,24 @@ export function DeFi() {
           {capabilities.map((cap, i) => (
             <div
               key={cap.title}
-              className="group relative p-8 md:p-12 bg-black/[0.03] hover:bg-dark hover:text-white transition-all duration-500 hover:shadow-2xl backdrop-blur-sm"
+              className="group relative p-8 md:p-12 bg-black/[0.03] hover:bg-dark hover:text-white transition-all duration-500 hover:shadow-2xl backdrop-blur-sm overflow-hidden"
             >
               {/* Animated Accent Line */}
               <div className="absolute top-0 left-0 w-1.5 h-0 bg-brand group-hover:h-full transition-all duration-500 ease-out"></div>
 
-              <span className="font-mono text-xs md:text-sm text-brand font-bold tracking-[0.3em] block mb-6">
-                // 0{i + 1}
-              </span>
-              <div>
+              {/* Character — invisible until hover */}
+              <img
+                src={cap.image}
+                alt=""
+                className="opacity-0 group-hover:opacity-100"
+                style={cap.imageStyle}
+                draggable={false}
+              />
+
+              <div className="relative z-10">
+                <span className="font-mono text-xs md:text-sm text-brand font-bold tracking-[0.3em] block mb-6">
+                  // 0{i + 1}
+                </span>
                 <h3 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter text-dark group-hover:text-white transition-colors duration-500">
                   {cap.title}
                 </h3>
