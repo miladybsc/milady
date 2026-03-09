@@ -779,6 +779,11 @@ describe("buildCharacterFromConfig", () => {
     expect(char.system).toContain("{{name}}");
   });
 
+  it("enables advancedMemory on the character", () => {
+    const char = buildCharacterFromConfig({} as MiladyConfig);
+    expect(char.advancedMemory).toBe(true);
+  });
+
   it("does not throw when agents.list is empty", () => {
     const config = { agents: { list: [] } } as MiladyConfig;
     expect(() => buildCharacterFromConfig(config)).not.toThrow();

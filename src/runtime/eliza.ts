@@ -1623,6 +1623,7 @@ export function buildCharacterFromConfig(config: MiladyConfig): Character {
     name,
     bio,
     system: systemPrompt,
+    advancedMemory: true,
     ...(style ? { style } : {}),
     ...(adjectives ? { adjectives } : {}),
     ...(topics ? { topics } : {}),
@@ -2460,7 +2461,7 @@ export async function startEliza(
     character,
     advancedCapabilities: true,
     actionPlanning: true,
-    // advancedMemory: true, // Not supported in this version of AgentRuntime
+    // advancedMemory is set on the Character object (buildCharacterFromConfig)
     plugins: [
       miladyPlugin,
       ...(phettaPlugin ? [phettaPlugin] : []),
