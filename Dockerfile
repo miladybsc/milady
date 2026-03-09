@@ -121,5 +121,7 @@ ENV PGLITE_DATA_DIR="/data/.milady/workspace/.eliza/.elizadb"
 # onboarding/config/database survive redeploys.
 RUN mkdir -p /data/.milady/workspace/.eliza/.elizadb
 
-# Railway sets $PORT dynamically. Map it to MILADY_PORT at runtime.
-CMD ["sh", "-lc", "MILADY_PORT=${PORT:-2138} node milady.mjs start"]
+# Railway needs the HTTP port to open quickly. Start the API-first headless
+# server directly from source so the control UI becomes reachable before the
+# heavier runtime finishes booting.
+CMD ["sh", "-lc", "MILADY_PORT=${PORT:-2138} node --import tsx src/runtime/dev-server.ts"]

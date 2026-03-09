@@ -38,5 +38,6 @@ USER node
 # Set MILADY_API_TOKEN in production to require auth.
 ENV MILADY_API_BIND="0.0.0.0"
 
-# Start the API server + dashboard UI on port 2138.
-CMD ["node", "milady.mjs", "start"]
+# Start the API-first headless server so container platforms can reach the
+# control UI immediately while the runtime finishes booting.
+CMD ["node", "--import", "tsx", "src/runtime/dev-server.ts"]
