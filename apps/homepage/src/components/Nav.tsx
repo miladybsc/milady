@@ -15,6 +15,9 @@ export function Nav() {
         <a href="#features" className="text-text-muted hover:text-brand transition-colors duration-300">
           Features
         </a>
+        <a href="/document" className="text-text-muted hover:text-brand transition-colors duration-300">
+          Document
+        </a>
         <a
           href="#download"
           className="border-sharp px-4 py-2 hover:bg-brand hover:text-dark hover:border-brand transition-all duration-300"

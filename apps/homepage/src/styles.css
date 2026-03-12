@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 
 @theme inline {
   --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -63,6 +65,42 @@ body {
 .border-sharp-dark {
   border: 1px solid var(--color-dark);
   border-radius: 2px;
+}
+
+/* Custom Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand);
+}
+
+/* Page Level Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-left: 1px solid var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
 }
 
 /* Peekaboo — all animation driven by inline styles in Comparison.tsx */
