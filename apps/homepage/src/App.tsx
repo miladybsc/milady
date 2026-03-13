@@ -6,10 +6,17 @@ import { Privacy } from "./components/Privacy";
 import { DeFi } from "./components/DeFi";
 import { Features } from "./components/Features";
 import { Comparison } from "./components/Comparison";
+import { Document } from "./components/Document";
+import { DocumentationPage } from "./components/DocumentationPage";
 import { Footer } from "./components/Footer";
 import { VrmAvatar } from "./components/VrmAvatar";
 
 export function App() {
+  const pathname = typeof window === "undefined" ? "/" : window.location.pathname;
+  if (pathname.startsWith("/document")) {
+    return <DocumentationPage />;
+  }
+
   return (
     <div className="relative min-h-screen bg-dark text-text-light font-sans selection:bg-brand selection:text-dark">
       {/* 1. Base Dark Background */}
@@ -60,6 +67,7 @@ export function App() {
           <DeFi />
           <Privacy />
           <Features />
+          <Document />
         </main>
 
         <footer className="relative z-30 pointer-events-auto bg-dark">

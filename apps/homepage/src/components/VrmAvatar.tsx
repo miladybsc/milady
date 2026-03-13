@@ -16,7 +16,7 @@ export function VrmAvatar({ url }: { url: string }) {
 
         async function load() {
             const loader = new GLTFLoader();
-            // @ts-expect-error version mismatch between three-vrm and @types/three
+            // @ts-ignore version mismatch between three-vrm and @types/three
             loader.register((parser) => new VRMLoaderPlugin(parser));
 
             try {
