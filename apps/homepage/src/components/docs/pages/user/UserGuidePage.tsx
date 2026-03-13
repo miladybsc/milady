@@ -3,7 +3,7 @@ import { TopicSections } from "../shared/TopicSections";
 const content = `
 # User Guide
 
-**Milady BSC** is a personal AI assistant running on your local machine, built upon **ElizaOS** and optimized for **BSC (Binance Smart Chain)** scenarios.
+**Milady** is a personal AI assistant running on your local machine, built upon **ElizaOS** and optimized for **multichain** scenarios.
 
 It manages sessions, tools, and connectors through a central Gateway, providing access via a local Dashboard, CLI, Desktop App, and various messaging platforms.
 
@@ -11,7 +11,7 @@ It manages sessions, tools, and connectors through a central Gateway, providing 
 
 - **Local-First & Privacy-First**: Designed to run without reliance on centralized hosted runtimes.
 - **Unified Entry Points**: CLI, Dashboard, TUI, and Desktop App cover everything from novice to advanced usage.
-- **BSC Native**: Deep integration with BSC wallets, plugins, and on-chain automation.
+- **On-chain Native**: Deep integration with wallets, plugins, and on-chain automation.
 
 ## Best Practices
 

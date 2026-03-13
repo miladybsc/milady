@@ -1,9 +1,9 @@
 import { TopicSections } from "../shared/TopicSections";
 
 const content = `
-# Wallet & BSC Safety
+# Wallet & On-chain Safety
 
-This branch is optimized for **BSC**, making wallet capabilities powerful but high-risk. Treat these features with extreme caution.
+This branch is optimized for **on-chain** interactions, making wallet capabilities powerful but high-risk. Treat these features with extreme caution.
 
 ## Risk Principles
 
@@ -13,13 +13,13 @@ This branch is optimized for **BSC**, making wallet capabilities powerful but hi
 
 ## Configuration
 
-- **Private Key**: Set via \`BSC_PRIVATE_KEY\` env var. Ensure \`.env\` is **gitignored**.
+- **Private Key**: Set via your environment variables. Ensure \`.env\` is **gitignored**.
 - **RPC URL**: Use a reliable RPC (e.g., from QuickNode or Alchemy) to avoid rate limits and front-running risks.
 
 ## On-Chain Failures
 
 Common issues:
-- **Gas**: Insufficient BNB for gas fees.
+- **Gas**: Insufficient native tokens for gas fees.
 - **Nonce**: Transaction sequence mismatch (often due to manual + agent usage of same wallet).
 - **Slippage**: High volatility causing swap failures.
 

@@ -33,10 +33,10 @@ export const userTopics: DocTopic[] = [
   { slug: "user-guide", title: "User Guide", group: "User", summary: "Product positioning, boundaries, and default runtime behavior.", Page: UserGuidePage },
   { slug: "users-installation", title: "Installation", group: "User", summary: "Installation paths, runtime baseline, and first-start requirements.", Page: UsersInstallationPage },
   { slug: "users-quickstart", title: "Quickstart", group: "User", summary: "Shortest path to verify a usable installation.", Page: UsersQuickstartPage },
-  { slug: "users-ecosystem", title: "Product & Ecosystem", group: "User", summary: "Product overview, BSC scenarios, and ecosystem positioning.", Page: UsersEcosystemPage },
+  { slug: "users-ecosystem", title: "Product & Ecosystem", group: "User", summary: "Product overview, on-chain scenarios, and ecosystem positioning.", Page: UsersEcosystemPage },
   { slug: "users-capabilities", title: "All Features", group: "User", summary: "Summary of available capabilities and usage strategies.", Page: UsersCapabilitiesPage },
   { slug: "users-operations", title: "How to Use", group: "User", summary: "Daily commands, operations rhythm, and stability practices.", Page: UsersOperationsPage },
-  { slug: "users-wallet", title: "Wallet & BSC Safety", group: "User", summary: "Risk control practices for wallet and on-chain capabilities.", Page: UsersWalletPage },
+  { slug: "users-wallet", title: "Wallet & On-chain Safety", group: "User", summary: "Risk control practices for wallet and on-chain capabilities.", Page: UsersWalletPage },
   { slug: "users-privacy", title: "Privacy Controls", group: "User", summary: "Network exposure, token, and data boundary controls.", Page: UsersPrivacyPage },
   { slug: "users-troubleshooting", title: "Troubleshooting", group: "User", summary: "Fixed sequence for troubleshooting and high-quality feedback.", Page: UsersTroubleshootingPage },
 ];

@@ -20,7 +20,7 @@ When things go wrong, follow this structured approach to diagnose and resolve is
 
 ### "Wallet transaction failed"
 - **Cause**: Insufficient gas or RPC error.
-- **Fix**: Check BNB balance; switch RPC endpoint.
+- **Fix**: Check native token balance; switch RPC endpoint.
 
 ### "Plugin not loading"
 - **Cause**: Dependency mismatch or build error.

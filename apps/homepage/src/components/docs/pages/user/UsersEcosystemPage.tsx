@@ -3,7 +3,7 @@ import { TopicSections } from "../shared/TopicSections";
 const content = `
 # Product & Ecosystem
 
-**Milady BSC** is not just a chatbot. It is a fully autonomous agent framework integrated into the **Binance Smart Chain (BSC)** ecosystem.
+**Milady** is not just a chatbot. It is a fully autonomous agent framework integrated into the **Web3** ecosystem.
 
 ## Vision
 
@@ -20,7 +20,7 @@ To empower users with **sovereign AI agents** that can:
 
 ## Key Differentiators
 
-| Feature | Milady BSC | Traditional Bots |
+| Feature | Milady | Traditional Bots |
 | :--- | :--- | :--- |
 | **Runtime** | Local & Autonomous | Cloud & Scripted |
 | **Wallet** | User-Controlled | Custodial / None |
